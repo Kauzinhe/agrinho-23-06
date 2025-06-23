@@ -1,0 +1,182 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #913b1d 0%, #5c1f0a 100%);
+  color: #fffbe7;
+  text-align: center;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Logo */
+.logo {
+  width: 280px;
+  max-width: 90%;
+  margin: 0 auto 30px;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Títulos */
+h1 {
+  font-size: 3.8rem;
+  color: #f8e71c;
+  text-shadow: 2px 2px 8px #7a5a00;
+  margin-bottom: 25px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+h2 {
+  color: #fffbe7;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  margin-bottom: 15px;
+  font-size: 2.4rem;
+}
+
+/* Seções principais */
+.convite, .descricao, .extras {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 30px 25px;
+  margin-bottom: 30px;
+  border-radius: 18px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+}
+
+/* Seção comidas */
+.comidas {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 35px 0;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  width: 230px;
+  padding: 20px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.6);
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+}
+
+.item p {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fffbe7;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* Seção evento */
+.evento {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 45px 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.45);
+}
+
+.banda {
+  flex: 1 1 380px;
+  max-width: 480px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.55);
+  object-fit: cover;
+}
+
+.info {
+  flex: 1 1 320px;
+  text-align: left;
+  color: #fffbe7;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.info h2 {
+  margin-top: 0;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #f8e71c;
+  text-shadow: 2px 2px 6px #7a5a00;
+}
+
+.info p {
+  margin: 10px 0;
+}
+
+/* Extras */
+.extras p {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .evento {
+    flex-direction: column;
+  }
+
+  .info {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .comidas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    width: 90%;
+  }
+}
